@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  height: 400px;
+  align-content: center;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+ 
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(56, 51, 51, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="blue">1</div>
+  <div class="green">2</div>
+  <div class="red"> 3</div>  
+  <div class="purple">4</div>
+  
+</div>
+
+</body>
+<script>
+    const div = document.querySelectorAll('div')
+    const body = document.querySelector('body')
+    div.forEach(function(btn){
+        btn.addEventListener('click', function(e){
+            console.log(e.target)
+              body.style.backgroundColor = e.target.className
+        });
+    });
+</script>
+</html>
+
+
