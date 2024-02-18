@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        div{
+            display: flex;
+            padding: 200px;
+            margin: 100px;
+            justify-content: center;
+            background-color: blueviolet;
+            color: orange;
+            font-size: 50px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div  class="center"    id="time"></div>
+</body>
+<script>
+    const time = document.getElementById('time')
+    setInterval(function(){
+        let date = new Date();
+        time.innerHTML = date.toLocaleTimeString();
+    },1000);
+</script>
+</html>
